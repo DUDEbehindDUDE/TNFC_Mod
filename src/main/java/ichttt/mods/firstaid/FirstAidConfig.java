@@ -62,13 +62,13 @@ public class FirstAidConfig {
     @Config.LangKey("firstaid.config.scalemaxhealth")
     @Config.RequiresWorldRestart
     @ExtraConfig.Sync
-    public static boolean scaleMaxHealth = false;
+    public static boolean scaleMaxHealth = true;
 
     @Config.Comment("If true, max health will be capped at 6 hearts and absorption at 2 hearts per limb. If false, the health cap will be much higher (64 hearts normal and 16 absorption)")
     @Config.LangKey("firstaid.config.capmaxhealth")
     @Config.RequiresWorldRestart
     @ExtraConfig.Sync
-    public static boolean capMaxHealth = true;
+    public static boolean capMaxHealth = false;
 
     @Config.Comment("If true, all usages of setHealth from other mods will be captured. Should not cause any problems, but allow mods like scaling health bandages to apply")
     @Config.LangKey("firstaid.config.sethealth")
@@ -153,7 +153,7 @@ public class FirstAidConfig {
         @Config.Comment("Specifies how much percent of the max health should be restored when sleeping")
         @Config.LangKey("firstaid.config.sleephealpercentage")
         @Config.RangeDouble(min = 0D, max = 1D)
-        public double sleepHealPercentage = 0.07D;
+        public double sleepHealPercentage = 0.5D;
 
         @Config.Comment("The value external regen will be multiplied with. Has no effect if \"allowOtherHealingItems\" is disabled")
         @Config.LangKey("firstaid.config.otherregenmultiplier")
